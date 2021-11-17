@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Prom {
 
     /* In order to purchase a ticket to go to prom,
@@ -6,4 +8,28 @@ public class Prom {
      */
 
 
+
+
+    public static void main(String[] args) {
+
+        int gradeLevel=Integer.parseInt(JOptionPane.showInputDialog("WHat Grade are you in?(9,10,11,12)"));
+        int discipline=Integer.parseInt(JOptionPane.showInputDialog("How many suspensions have you had?"));
+        int money=Integer.parseInt(JOptionPane.showInputDialog("About how much money do you have? Round down to nears $5"));
+
+
+        if (gradeLevel >= 11){
+            if (discipline>=1){
+                System.out.println("You can't go to prom.");
+            }else{
+
+                if(money>=40){
+                    System.out.println("You can get a Prom Ticket.");
+                }else{
+                    System.out.println("You can't go to prom.");
+                }
+            }
+        }else{
+            System.out.println("You can't go to prom.");
+        }
+    }
 }

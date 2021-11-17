@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.text.DecimalFormat;
+
 public class Payroll {
 
     /*
@@ -19,8 +22,50 @@ public class Payroll {
 
     public static void main(String[] args) {
 
+    double wage= input("what is your hourly rate?");
+    double hours=input("how many hours did you work?");
 
-
+    if (hours> 40){
+      output( overtimeWage(hours,wage));
+    }else{
+       output(normalWage(hours,wage));
+    }
 
     }
+
+    public static double normalWage(double hours, double wage){
+
+        return hours*wage;
+    }
+
+    public static  double overtimeWage(double hours, double wage){
+
+        double overtime=hours-40;
+
+        return (40*wage)+(overtime*(wage*1.5));
+    }
+
+public static double input(String prompt){
+
+        return Double.parseDouble(JOptionPane.showInputDialog(prompt));
+
+}
+public static void output(double wage){
+    DecimalFormat round= new DecimalFormat("#,###.00");
+    JOptionPane.showMessageDialog(null,"You've earned $" +round.format(wage));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
