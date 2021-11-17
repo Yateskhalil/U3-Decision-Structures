@@ -28,11 +28,6 @@ public class AddORMultiply {
 
             System.out.println(num1*num2);
         }
-
-
-
-
-
     }
 
     public static void add(double num1, double num2){
@@ -40,8 +35,6 @@ public class AddORMultiply {
 
             System.out.println(num1+num2);
         }
-
-
 }
 
 
