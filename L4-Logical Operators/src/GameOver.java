@@ -76,6 +76,13 @@ public class GameOver {
             //After the game ends, we need to reinitialize the frame, reinitialize our variables and output some details
             //to the player.
 
+            if (seconds  >= 0  || clickCount >= 20){
+                timer.stop();
+                results.setText("You clicked "+ clickCount +" time in "+ (maxSeconds-seconds) +"seconds");
+                seconds=maxSeconds;
+                clickCount=0;
+                panel.updateUI();
+            }
 
         }
     }
